@@ -75,5 +75,9 @@ app.get('/profile', (req, res)=>{
     }
 });
 
+app.post('/logout', (req, res)=>{
+    res.cookie('token', '').json(true);
+});
+
 //case ID: 16955676271
 app.listen(4000);
